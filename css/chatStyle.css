@@ -67,7 +67,7 @@ border: 1px solid rgb(186, 142, 28);
 	opacity:0.7;
 	
 }
-.GuestIcon{
+.GuestIcon,.localIcon{
 width: 100px;
 height: 100px;
 /* border: 1px solid rgb(0, 0, 0); */
@@ -80,6 +80,9 @@ border-radius: 50%;
 background-image: url("../images/bharath.png");
 background-size: 100%;
 box-shadow: 0 0 22px rgb(79, 79, 79);
+}
+.localIcon{
+	background-image: url("../images/pawan.jpg")!important;
 }
 .menu span
 {
@@ -129,6 +132,27 @@ background-position: 50% 100%;
 }
 .Uplaod{
 		background-image: url("../images/upload.png");
+background-size: 55% 69%;
+background-repeat: no-repeat;
+/* margin: 5px; */
+background-position: 50% 100%;
+}
+.inList{
+	background-image: url("../images/oldUser.png");
+background-size: 55% 69%;
+background-repeat: no-repeat;
+/* margin: 5px; */
+background-position: 50% 100%;
+}
+.newList{
+	background-image: url("../images/user.png");
+background-size: 55% 69%;
+background-repeat: no-repeat;
+/* margin: 5px; */
+background-position: 50% 100%;
+}
+.community{
+	background-image: url("../images/users.png");
 background-size: 55% 69%;
 background-repeat: no-repeat;
 /* margin: 5px; */

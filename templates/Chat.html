@@ -3,9 +3,9 @@
 	 	<div class="container">
     <div class="GuestIcon"></div>
     <div class="menu">
-    	<span ng-bind="userName"></span>
+    	<span ng-bind="guestUserName"></span>
     	
-    <span ng-bind="phoneNum"></span>
+    <span ng-bind="guestUserNum"></span>
     	
     	<span class="message"></span>
     	<span class="Call" ng-click="callHim()"></span>
@@ -18,7 +18,7 @@
       <li ng-repeat="message in messages" class="col-sm-10" ng-click="toggleSelected($event,message)">
       	
         <!-- exit a message -->
-      <div style="float:left" class="col-sm-10 external" ng-if="message.userName!=userName"> <span id="guestUsername" ng-bind="message.userName"></span><span ng-bind="message.text" ></span>
+      <div style="float:left" class="col-sm-10 external" ng-if="message.userName!=userName&&message.userNum==guestUserNum"> <span id="guestUsername" ng-bind="message.userName"></span><span ng-bind="message.text" ></span>
         <!-- delete message -->
 <!--
        <button ng-click="messages.$remove(message)" >X</button>

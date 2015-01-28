@@ -1,6 +1,6 @@
+chatApp.controller("listCtrl", ["$scope", "$firebase", "commonDataFactory", "$http",
+function($scope, $firebase, commonDataFactory, $http) {
 
-chatApp.controller("SampleCtrl", ["$scope", "$firebase",
-function($scope, $firebase) {
 	var ref = new Firebase("https://testbat.firebaseio.com/");
 	var remMsgList = [];
 	// create an AngularFire reference to the data
@@ -17,21 +17,41 @@ function($scope, $firebase) {
 		$scope.userName = localStorage.getItem('userName');
 		$scope.phoneNum = localStorage.getItem('userNum');
 	}
-
-	$scope.toggleSelected = function(e, message) {
-		var index;
-		console.log(e);
-		if (angular.element(e.currentTarget).find('div').hasClass('selected')) {
-			index = remMsgList.indexOf(message);
-			remMsgList.splice(index, 1);
-			angular.element(e.currentTarget).find('div').removeClass('selected');
-		} else {
-			remMsgList.push(message);
-			angular.element(e.currentTarget).find('div').addClass('selected');
-		}
+	$scope.getChatHistory = function(message) {
+		commonDataFactory.setGuestUserName(message.userName);
+		commonDataFActory.setGuestUserNum(message.userNum);
+		$http.path = '/friends';
 
 	};
-	$scope.deleteMessages = function() {
+	$scope.getList=function(){
+		
+	};
+	$scope.getNewContacts=function(){
+		
+	};
+	$scope.getCommunities=function(){};
+		$scope.changeUserList = function(e) {
+		console.log($(e.target));
+		switch(e.target.className) {
+		case 'inList':
+			$scope.getList();
+			break;
+		case 'newList':
+			$scope.getNewContacts();
+			break;
+
+		case 'community':
+			$scope.getCommunities();
+			break;
+		case 'Delete':
+			$scope.deletePerson();
+			break;
+		default:
+			alert('your finger is shaking,be tight');
+		}
+	};
+
+	$scope.deletePerson = function() {
 		a = [];
 		$('.selected').parent().remove();
 		for ( i = 0; i < remMsgList.length; i++) {
@@ -44,8 +64,8 @@ function($scope, $firebase) {
 	// synchronize the object with a three-way data binding
 	// click on `index.html` above to see it used in the DOM!
 	//syncObject.$bindTo($scope, "data");
-	
-	$scope.addMessage = function(text) {
+
+	$scope.addPerson = function(text) {
 		$scope.newMessageText = '';
 		$scope.messages.$add({
 			userName : localStorage.getItem('userName'),
