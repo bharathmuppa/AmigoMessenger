@@ -15,8 +15,8 @@ padding: 10px 10px 0 10px;
 font-family: mySecondFont;
 }
 .selected{
-border-radius: 15px 15px 15px 15px;
-	border:6px solid green;
+
+	border:6px solid red !important;
 }
 #messageLst {
 	font-family:myFirstFont;
