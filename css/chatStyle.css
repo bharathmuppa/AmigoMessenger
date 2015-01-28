@@ -1,11 +1,11 @@
 @font-face {
     font-family: myFirstFont;
-    src: url(Smart_Kid.otf);
+    src: url(fonts/Smart_Kid.otf);
 }
 
 @font-face {
     font-family: mySecondFont;
-    src: url(Folktale.ttf);
+    src: url(fonts/Folktale.ttf);
 }
 .menu{
 width: 60%;
@@ -77,7 +77,7 @@ position: relative;
 z-index: 2;
 margin: 10px;
 border-radius: 50%;
-background-image: url("bharath.png");
+background-image: url("../images/bharath.png");
 background-size: 100%;
 box-shadow: 0 0 22px rgb(79, 79, 79);
 }
@@ -107,7 +107,7 @@ color: currentcolor;
 }
 .Delete
 {
-	background-image: url("delete.png");
+	background-image: url("../images/delete.png");
 background-size: 55% 69%;
 background-repeat: no-repeat;
 /* margin: 5px; */
