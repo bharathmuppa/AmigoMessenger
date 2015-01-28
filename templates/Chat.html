@@ -1,17 +1,17 @@
 
-<html ng-app="sampleApp">
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/chatStyle.css"></link>
-	 <body ng-controller="SampleCtrl">
+
 	 	<div class="container">
     <div class="GuestIcon"></div>
     <div class="menu">
     	<span ng-bind="userName"></span>
-    	<span ng-bind="phoneNum"></span>
+    	
+    <span ng-bind="phoneNum"></span>
+    	
+    	<span class="message"></span>
+    	<span class="Call" ng-click="callHim()"></span>
     	
     	<span class="Delete" ng-click="deleteMessages()"></span>
-    	<span class="Archive" ></span>
-    	<span class="Call"></span>
+    	<span class="Uplaod" ng-click="openUplaodList()"></span>
     </div>
     
     <ul id="messageLst">
@@ -41,16 +41,4 @@
       <button type="submit" class="btn btn-success">add message</button>
     </form>
     </div>
-  </body>
-	
-	 <!--<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-		 
-	 -->
-	 <script src="js/jquery-1.10.1.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
-<!-- Firebase -->
-<script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
-<!-- AngularFire -->
-<script src="https://cdn.firebase.com/libs/angularfire/0.9.1/angularfire.min.js"></script>
-<script src="js/script.js"></script>
-</html>
+  

@@ -1,5 +1,5 @@
-var app = angular.module("sampleApp", ["firebase"]);
-app.controller("SampleCtrl", ["$scope", "$firebase",
+
+chatApp.controller("SampleCtrl", ["$scope", "$firebase",
 function($scope, $firebase) {
 	var ref = new Firebase("https://testbat.firebaseio.com/");
 	var remMsgList = [];
