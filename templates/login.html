@@ -5,9 +5,9 @@
 <input type="text" id="userPic" ng-model="userStatus"></input>	
 </div>
 <div ng-show="picDiv">
-	<input type="file" id="userPic" ng-model="userPic"></input>	
+	<input type="file" id="userPic" ng-model="userPic" ng-change="changePicCode()"></input>	
 </div>
-<div ng-click="goToNext()" ng-disable="loginDataFlag">next</div>
+<div ng-click="goToNext()" id="picPart" ng-disabled="loginDataFlag" >next</div>
 
 
 </div>
