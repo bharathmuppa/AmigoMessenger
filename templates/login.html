@@ -1,13 +1,15 @@
 <div>
 	<div ng-hide="picDiv">
 	<input type="text" id="userName" ng-model="userName" ng-blur="checkDetails(1)"></input><br>
-	<input type="tel" id="userNum" ng-model="userNumber" ng-blur="checkDetails(2)"></input><br><br><br>
+	<input type="tel" id="userNum" ng-model="userNum" ng-blur="checkDetails(2)"></input><br><br><br>
 <input type="text" id="userPic" ng-model="userStatus"></input>	
 </div>
-<div ng-show="picDiv">
-	<input type="file" id="userPic" ng-model="userPic" ng-change="changePicCode()"></input>	
+<div ng-show="picDiv" id="imageDisplay">
+	<input type="file" id="userPic" ng-model="userPic" accept="image/*" ng-change="changePicCode()"></input>	
 </div>
-<div ng-click="goToNext()" id="picPart" ng-disabled="loginDataFlag" >next</div>
+
+
+<button ng-click="goToNext()" id="picPart" ng-disabled="loginDataFlag" value="next" >next</button>
 
 
 </div>
