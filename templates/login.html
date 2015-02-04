@@ -1,17 +1,20 @@
 <div id="LoginForm">
 	<div ng-hide="picDiv" id="loginContainerDiv">
-	<input type="text" id="userName" ng-model="userName" ng-blur="checkDetails(1)"></input><br>
-	<div id='part1' class="borderDiv"></div>
-	<input type="tel" id="userNum" ng-model="userNum" ng-blur="checkDetails(2)"></input>
+		<div id="innerContainer">
+	<input type="text" id="userName" ng-model="userName" ng-blur="checkDetails(1)" placeholder="Username"></input><br>
+	<div id='part1' class="borderDiv"></div><br>
+	<input type="tel" id="userNum" ng-model="userNum" ng-blur="checkDetails(2)" placeholder="Mobile Number"></input>
 	<div id='part2' class="borderDiv"></div>
-	
+	</div>
 </div>
+<button ng-click="goToNext()" id="picPart" ng-disabled="loginDataFlag" value="next" >next</button>
+
 <div ng-show="picDiv" id="imageDisplay">
 	<input type="file" id="userPic" ng-model="userPic" accept="image/*" ng-change="changePicCode()"></input>	
 </div>
 
 
-<button ng-click="goToNext()" id="picPart" ng-disabled="loginDataFlag" value="next" >next</button>
+
 
 
 </div>
