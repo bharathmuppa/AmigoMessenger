@@ -1,0 +1,258 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(fonts/Smart_Kid.otf);
+}
+
+@font-face {
+    font-family: mySecondFont;
+    src: url(fonts/Folktale.ttf);
+}
+::-webkit-input-placeholder {
+   opacity:0.3;
+}
+
+/*login page css*/
+#LoginForm{
+width: 100%;
+height: 100%;
+position: absolute;
+background-color: light-grey;
+background-image: url("../images/Background.png");
+background-repeat: no-repeat;
+background-size: 100% 160%;
+}
+#picPart{
+width: 100%;
+background: rgb(0, 0, 0);
+border: none;
+/* line-height: 50px; */
+/* border-radius: 50%; */
+height: 10%;
+padding: 0;
+margin: 0;
+color: rgb(255, 255, 255);
+font-weight: bold;
+font-size: 24px;
+opacity: 0.7;
+}
+#loginContainerDiv{
+width: 80%;
+height: 90%;
+max-width: 300px;
+/* min-width: 200px; */
+/* position: absolute; */
+/* margin: 50% 10% 10% 10%; */
+display: table;
+margin: auto;
+	
+	
+}
+#userName,#userNum{
+background: rgba(0, 0, 0, 0);
+border: 0px;
+margin: auto;
+width: 100%;
+color: rgb(255, 255, 255);
+font-family: cursive;
+font-size: 24px;
+font-style: italic;
+	}
+#userName:focus{
+	background: rgba(0, 0, 0, 0);
+border: 0px;
+ outline:0px !important;
+    -webkit-appearance:none;
+    color: rgb(255, 255, 255);
+font-family: cursive;
+font-size: 24px;
+font-style: italic;
+}
+#userNum:focus
+ {
+	background: rgba(0, 0, 0, 0);
+border: 0px;
+ outline:0px !important;
+    -webkit-appearance:none;
+    color: rgb(255, 255, 255);
+font-family: cursive;
+font-size: 24px;
+font-style: italic;
+}
+#userPic{
+	border: 2px solid;
+width: 75%;
+height: 204px;
+border-radius: 143;
+
+background-size: 100%;
+}
+#innerContainer,#imageDisplay{
+width: 74%;
+margin: auto;
+display: table-cell;
+vertical-align: middle;
+}
+.borderDiv{
+	height: 10px;
+width: 100%;
+border-top: 2px solid;
+border-top-color: rgb(128, 128, 128);
+border-left: 2px solid;
+border-left-color: rgb(128, 128, 128);
+border-right: 0px solid;
+border-bottom: 0px solid;
+color: rgba(0, 0, 0, 0);
+}
+
+
+.menu{
+width: 60%;
+display: inline;
+float: right;
+padding: 10px 10px 0 10px;
+font-family: mySecondFont;
+}
+.selected{
+
+	border:6px solid red !important;
+}
+#messageLst {
+	font-family:myFirstFont;
+width: 100%;
+border: 3px solid rgb(0, 128, 0);
+border-radius: 15px 15px 15px 15px;
+margin-top: 1%;
+min-height: 85%;
+height: 85%;
+overflow: hidden
+
+left: 0 !important;
+padding: 0;
+}
+ul li .local,ul li .external
+{
+	width: 70%;
+float: right;
+border: 1px solid rgb(66, 202, 66);
+background: rgb(144, 226, 158);
+margin: 10px 5px 10px 0px;
+border-radius: 18px;
+/* border-bottom-left-radius: 10px; */
+border-top-right-radius: 0;
+font-size: 16px;
+}
+span{
+	padding: 5px;
+display: block;
+}
+ul li
+{
+	 list-style-type: none;
+	 word-wrap:break-word;
+}
+ul li .external{
+	
+float:left;
+background: rgb(255, 183, 71);
+border-top-right-radius: 18px;
+border-top-left-radius: 0px;
+border: 1px solid rgb(186, 142, 28);
+}
+#guestUsername
+{
+	font-size: 12px;
+	font-style: italic;
+	opacity:0.7;
+	
+}
+.GuestIcon,.localIcon{
+width: 100px;
+height: 100px;
+/* border: 1px solid rgb(0, 0, 0); */
+display: inline-block;
+/* margin-top: 8%; */
+position: relative;
+z-index: 2;
+margin: 10px;
+border-radius: 50%;
+background-image: url("../images/bharath.png");
+background-size: 100%;
+box-shadow: 0 0 22px rgb(79, 79, 79);
+}
+.localIcon{
+	background-image: url("../images/pawan.jpg")!important;
+}
+.menu span
+{
+width: 100%;
+/* border-bottom: 1px solid rgb(0, 128, 0); */
+display: inline-block;
+float: left;
+padding: 0px;
+}
+.menu span:first-child
+{
+
+font-size: 30px;
+line-height: 35px;
+color: currentcolor;
+}
+.menu span:nth-child(2)
+{
+	border-bottom: 1px solid rgb(0, 128, 0); 
+}
+.menu span:nth-child(3),.menu span:nth-child(4),.menu span:nth-child(5),.menu span:nth-child(6)
+{
+	width:25%;
+	height:40px;
+}
+.Delete
+{
+	background-image: url("../images/delete.png");
+background-size: 55% 69%;
+background-repeat: no-repeat;
+/* margin: 5px; */
+background-position: 50% 100%;
+}
+.call{
+	background-image: url("../images/phone.png");
+background-size: 55% 69%;
+background-repeat: no-repeat;
+/* margin: 5px; */
+background-position: 50% 100%;
+}
+.message{
+	background-image: url("../images/envelope.png");
+background-size: 55% 69%;
+background-repeat: no-repeat;
+/* margin: 5px; */
+background-position: 50% 100%;
+}
+.Uplaod{
+		background-image: url("../images/upload.png");
+background-size: 55% 69%;
+background-repeat: no-repeat;
+/* margin: 5px; */
+background-position: 50% 100%;
+}
+.inList{
+	background-image: url("../images/oldUser.png");
+background-size: 55% 69%;
+background-repeat: no-repeat;
+/* margin: 5px; */
+background-position: 50% 100%;
+}
+.newList{
+	background-image: url("../images/user.png");
+background-size: 55% 69%;
+background-repeat: no-repeat;
+/* margin: 5px; */
+background-position: 50% 100%;
+}
+.community{
+	background-image: url("../images/users.png");
+background-size: 55% 69%;
+background-repeat: no-repeat;
+/* margin: 5px; */
+background-position: 50% 100%;
+}
