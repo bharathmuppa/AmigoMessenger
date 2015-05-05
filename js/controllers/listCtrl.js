@@ -1,36 +1,31 @@
-chatApp.controller("listCtrl", ["$scope", "$firebase", "commonDataFactory", "$http",
-function($scope, $firebase, commonDataFactory, $http) {
+chatApp.controller("listCtrl", ["$scope", "commonDataFactory", "$location","fireFactory",
+function($scope, commonDataFactory,$location,fireFactory) {
 
-	var ref = new Firebase("https://testbat.firebaseio.com/");
+	//var ref = new Firebase("https://testbat.firebaseio.com/");
 	var remMsgList = [];
-	// create an AngularFire reference to the data
-	var sync = $firebase(ref);
-	$scope.messages = sync.$asArray();
-	if (localStorage.getItem('userName') == null) {
-		$scope.userName = window.prompt('What is your name?');
-		$scope.phoneNum = window.prompt('What is your phone number?');
-		// download the data into a local object
-		localStorage.setItem('userName', $scope.userName);
-		localStorage.setItem('userNum', $scope.phoneNum);
+	
+	$scope.userData=commonDataFactory.getUserData();
+	localStorage.setItem("amigoUser",JSON.stringify($scope.userData));
+	if($scope.userData.pic!=="undefined")
+	angular.element('#localIcon').attr('src',$scope.userData.pic);
+	
+	$scope.messages = fireFactory.getListOfFriends($scope.userData);
 
-	} else {
-		$scope.userName = localStorage.getItem('userName');
-		$scope.phoneNum = localStorage.getItem('userNum');
-	}
 	$scope.getChatHistory = function(message) {
 		commonDataFactory.setGuestUserName(message.userName);
 		commonDataFActory.setGuestUserNum(message.userNum);
-		$http.path = '/friends';
+		$location.path = '/friends';
 
 	};
-	$scope.getList=function(){
-		
+	$scope.getList = function() {
+
 	};
-	$scope.getNewContacts=function(){
-		
+	$scope.getNewContacts = function() {
+
 	};
-	$scope.getCommunities=function(){};
-		$scope.changeUserList = function(e) {
+	$scope.getCommunities = function() {
+	};
+	$scope.changeUserList = function(e) {
 		console.log($(e.target));
 		switch(e.target.className) {
 		case 'inList':

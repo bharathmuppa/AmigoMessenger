@@ -1,8 +1,8 @@
-<div class="localIcon"></div>
+<img class="localIcon" src="./images/oldUser.png"></img>
 <div class="menu" ng-click="changeUserList($event)">
-	<span ng-bind="userName"></span>
+	<span ng-bind="userData.name"></span>
 
-	<span ng-bind="phoneNum"></span>
+	<span ng-bind="userData.num"></span>
 
 	<span class="inList" ></span>
 	<span class="newList" ></span>
@@ -11,5 +11,5 @@
 	
 </div>
 <ul ng-repeat="message in messages" id="messageLst">
-<li ng-if='message.userName!=userName' ng-bind="message.userName" ng-click="getChatHistory(message)"></li>
+<li  ng-bind="message" ng-click="getChatHistory($event)"></li>
 </ul>

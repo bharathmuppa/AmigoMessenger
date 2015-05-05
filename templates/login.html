@@ -1,28 +1,50 @@
 <div id="LoginForm">
+	<p id="titleBlock">
+		Amigo's Around
+	</p>
+
 	<div id="loginContainerDiv">
-		<div id="innerContainer">
-	<input type="text" id="userName" ng-model="userName" ng-blur="checkDetails(1)" placeholder="Username"></input><br>
-	<div id='part1' class="borderDiv"></div><br>
-	<input type="tel" id="userNum" ng-model="userNum" ng-blur="checkDetails(2)" placeholder="Mobile Number"></input>
-	<div id='part2' class="borderDiv"></div>
+		<!-- container for register and ogin button -->
+		<div id="registerContainer" ng-if="!registeredUser">
+			<div id="register" ng-click="registerUser()">
+				Register
+			</div>
+			<div id="login"  ng-click="loginUser()">
+				Login
+			</div>
+
+		</div>
+
+		<!--container for registering user -->
+		<div id="innerContainer1" >
+			<input type="text" id="userName" ng-model="userName" ng-blur="checkDetails(1)" placeholder="Username">
+			</input>
+			<br>
+			<div id='part1' class="borderDiv"></div>
+			<br>
+			<input type="tel" id="userNum" ng-model="userNum" ng-blur="checkDetails(2)" placeholder="Mobile Number">
+			</input>
+			<div id='part2' class="borderDiv"></div>
+			<button ng-click="goToNext()" id="picPart" ng-disabled="loginDataFlag" value="next" >
+				next
+			</button>
+		</div>
+		
+		<!-- container for login of user -->
+		<div id="innerContainer2" >
+
+			<input type="text" id="userName" ng-model="userName" ng-blur="checkDetails(1)" placeholder="Username">
+			</input>
+			<br>
+			<div id='part1' class="borderDiv"></div>
+			<br>
+			<input type="tel" id="userNum" ng-model="userNum" ng-blur="checkDetails(2)" placeholder="Mobile Number">
+			</input>
+			<div id='part2' class="borderDiv"></div>
+			<button ng-click="submitUser()" id="loginButtonDiv2">
+				Login
+			</button>
+
+		</div>
 	</div>
-</div>
-<!--
-<div ng-show="picDiv" id="imageDisplay">
-	<input type="file" id="userPic" ng-model="userPic" accept="image/*" ng-change="changePicCode()"></input>	
-</div>-->
-
-<button ng-click="goToNext()" id="picPart" ng-disabled="loginDataFlag" value="next" >next</button>
-
-<script>
-	$("#userPic").click(function() {
-		alert('hi');
-		$("#userPicButton").trigger('click');
-	});
-</script>
-
-
-
-
-
 </div>

@@ -1,11 +1,12 @@
 chatApp.factory('commonDataFactory',[function($http){
 	
 	var commonDataFactory={};
-	commonDataFactory.setGuestUserName=function(name){
-		commonDataFactory.guestUserName=name;
+	commonDataFactory.setUserData=function(data){
+		commonDataFactory.userData=data;
+		
 	};
-	commonDataFactory.getGuestUserName=function(){
-		return commonDataFactory.guestUserName;
+	commonDataFactory.getUserData=function(){
+		return commonDataFactory.userData;
 	};
 	commonDataFactory.setGuestUserNum=function(num){
 		commonDataFactory.guestUserNum=num;

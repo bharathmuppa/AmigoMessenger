@@ -1,0 +1,1 @@
+ var  usersListRef= new Firebase("https://zingbang.firebaseio.com/users");

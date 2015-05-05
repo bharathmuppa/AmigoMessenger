@@ -1,7 +1,7 @@
 
 chatApp.controller("chatCtrl", ["$scope", "commonDataFactory","$firebase",
 function($scope,commonDataFactory,$firebase) {
-	var ref = new Firebase("https://testbat.firebaseio.com/");
+	//var ref = new Firebase("https://testbat.firebaseio.com/");
 	var remMsgList = [];
 	// create an AngularFire reference to the data
 	var sync = $firebase(ref);
